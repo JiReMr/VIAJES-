@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Menu.ControladorMenu">
+
+    <top>
+        <Label text="--- MENU PRINCIPAL ---" style="-fx-font-size: 20px;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </Label>
+    </top>
+
+    <center>
+        <TextArea fx:id="textAreaOutput" editable="false" wrapText="true" />
+    </center>
+
+    <left>
+        <VBox spacing="5">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="REGISTRAR"/>
+            <Button text="1. Crear pasajero (compra de boleto)" onAction="#handleCrearPasajero"/>
+            <Button text="2. Crear ruta" onAction="#handleCrearRuta"/>
+            <Button text="3. Crear conductor" onAction="#handleCrearConductor"/>
+            <Button text="4. Crear vehículo" onAction="#handleCrearVehiculo"/>
+
+            <Label text="BÚSQUEDA / EDICIÓN">
+                <padding>
+                    <Insets top="10" right="0" bottom="0" left="0"/>
+                </padding>
+            </Label>
+            <Button text="5. Pasajero" onAction="#handleBuscarPasajero"/>
+            <Button text="6. Lista rutas" onAction="#handleListarRutas"/>
+            <Button text="7. Conductor" onAction="#handleBuscarConductor"/>
+
+            <Label text="VENTA">
+                <padding>
+                    <Insets top="10" right="0" bottom="0" left="0"/>
+                </padding>
+            </Label>
+            <Button text="8. Buscar boleto comprado" onAction="#handleBuscarBoleto"/>
+            <Button text="9. Comprar boleto" onAction="#handleComprarBoleto"/>
+            <Button text="10. Devolución boleto" onAction="#handleDevolucionBoleto"/>
+
+            <Label text="ELIMINAR">
+                <padding>
+                    <Insets top="10" right="0" bottom="0" left="0"/>
+                </padding>
+            </Label>
+            <Button text="11. Eliminar pasajero" onAction="#handleEliminarPasajero"/>
+            <Button text="12. Eliminar ruta" onAction="#handleEliminarRuta"/>
+            <Button text="13. Eliminar conductor" onAction="#handleEliminarConductor"/>
+            <Button text="14. Eliminar vehículo" onAction="#handleEliminarVehiculo"/>
+
+            <Button text="0. Salir" onAction="#handleSalir" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+        </VBox>
+    </left>
+
+    <bottom>
+        <Label fx:id="statusLabel" text="Estado: Listo">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </Label>
+    </bottom>
+
+</BorderPane>
